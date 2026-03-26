@@ -4,19 +4,44 @@
  * @author EAM
  */
 public class Car {
+    private int carID;
     private String type;
-    private double price;
-    private boolean avail;
-    
+    private String brand;
+    private double pricePerDay;
+    private boolean isAvailable;
+
+    // default constructor
     public Car() {
+	this.carID = -1;
 	this.type = "N/A";
-	this.price = 0;
-	this.availability = false;
+	this.brand = "N/A";
+	this.pricePerDay = 0.0;
+	this.isAvailable = false;
     }
-    
-    public Car(String type, double price, boolean avail) {
+
+    // complete constructor
+    public Car(ind carID, String type, String brand, double pricePerDay,
+	       boolean isAvailable) {
+	this.carID = carID;
 	this.type = type;
-	this.price = price;
+	this.brand = brand;
+	this.pricePerDay = pricePerDay;
 	this.avail = avail;
+    }
+
+    public int getCarID() {
+	return this.carID;
+    }
+
+    public boolean isAvailableForDates(String startDate, String endDate) {
+	return false;
+    }
+
+    public double getPricePerDay() {
+	return pricePerDay;
+    }
+
+    public void setAvailability(boolean status) {
+	this.isAvailable = status;
     }
 }
