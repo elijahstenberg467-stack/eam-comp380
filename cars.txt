@@ -1,0 +1,8 @@
+1,Sedan,Toyota,Camry,59.99,true
+2,SUV,Ford,Explorer,89.99,true
+3,Sports,Mazda,MX-5,79.99,true
+4,Sedan,Honda,Civic,49.99,false
+5,Truck,Ford,F-150,99.99,true
+6,Electric,Tesla,Model 3,109.99,true
+7,Van,Chrysler,Pacifica,79.99,true
+8,SUV,Jeep,Wrangler,94.99,false
