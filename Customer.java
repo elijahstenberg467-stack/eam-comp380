@@ -15,38 +15,54 @@ public class Customer {
     public Customer() {
         this.customerID = -1;
         this.firstName = "N/A";
-	this.lastName = "N/A";
+        this.lastName = "N/A";
         this.email = "N/A";
         this.password = "N/A";
         this.phoneNumber = "N/A";
     }
- 
+
     // complete constructor
     public Customer(int customerID, String firstName, String lastName,
-		    String email, String password, String phoneNumber) {
+                    String email, String password, String phoneNumber) {
         this.customerID = customerID;
         this.firstName = firstName;
-	this.lastName = lastName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
     }
 
+    // These methods are better handled by AuthService
     public void register() {
-	// fill method
+        // registration should be handled in AuthService
     }
 
     public boolean login(String email, String password) {
-	// fill method
-	return false;
+        // login should be handled in AuthService
+        return this.email.equals(email) && this.password.equals(password);
     }
 
     public int getCustomerID() {
-	return this.customerID;
+        return this.customerID;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
     }
 
     public String getEmail() {
-	return this.email;
+        return this.email;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
+    public String getPhoneNumber() {
+        return this.phoneNumber;
+    }
 }
