@@ -12,36 +12,50 @@ public class Car {
 
     // default constructor
     public Car() {
-	this.carID = -1;
-	this.type = "N/A";
-	this.brand = "N/A";
-	this.pricePerDay = 0.0;
-	this.isAvailable = false;
+        this.carID = -1;
+        this.type = "N/A";
+        this.brand = "N/A";
+        this.pricePerDay = 0.0;
+        this.isAvailable = false;
     }
 
     // complete constructor
-    public Car(ind carID, String type, String brand, double pricePerDay,
-	       boolean isAvailable) {
-	this.carID = carID;
-	this.type = type;
-	this.brand = brand;
-	this.pricePerDay = pricePerDay;
-	this.avail = avail;
+    public Car(int carID, String type, String brand, double pricePerDay,
+               boolean isAvailable) {
+        this.carID = carID;
+        this.type = type;
+        this.brand = brand;
+        this.pricePerDay = pricePerDay;
+        this.isAvailable = isAvailable;
     }
 
     public int getCarID() {
-	return this.carID;
+        return this.carID;
     }
 
-    public boolean isAvailableForDates(String startDate, String endDate) {
-	return false;
+    public String getType() {
+        return this.type;
+    }
+
+    public String getBrand() {
+        return this.brand;
     }
 
     public double getPricePerDay() {
-	return pricePerDay;
+        return this.pricePerDay;
+    }
+
+    public boolean isAvailable() {
+        return this.isAvailable;
     }
 
     public void setAvailability(boolean status) {
-	this.isAvailable = status;
+        this.isAvailable = status;
+    }
+
+    // simple availability check (Sprint 1 version)
+    public boolean isAvailableForDates(String startDate, String endDate) {
+        return this.isAvailable;
     }
 }
+    
