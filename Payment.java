@@ -30,11 +30,30 @@ public class Payment {
     }
 
     public double calculateSubtotal(int days, double pricePerDay) {
-        return 0.0;
+        this.subtotal = days * pricePerDay;
+        return this.subtotal;
     }
 
     public double applyTaxAndFees() {
-        return 0.0;
+        double taxAmount = this.subtotal * this.taxRate;
+        this.totalAmount = this.subtotal + taxAmount + this.fees;
+        return this.totalAmount;
+    }
+
+    public int getPaymentID() {
+        return this.paymentID;
+    }
+
+    public double getSubtotal() {
+        return this.subtotal;
+    }
+
+    public double getTaxRate() {
+        return this.taxRate;
+    }
+
+    public double getFees() {
+        return this.fees;
     }
 
     public double getTotalAmount() {
