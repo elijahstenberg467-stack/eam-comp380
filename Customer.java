@@ -1,6 +1,7 @@
+package com.carrental;
 /**
  * CSUN COMP 380/L - Spring 2026
- * 
+ *
  * @author EAM
  */
 public class Customer {
@@ -65,4 +66,8 @@ public class Customer {
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
+
+    public void setCustomerID(int customerID) {
+    }
 }
+

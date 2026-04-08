@@ -1,3 +1,4 @@
+package com.carrental;
 /**
  * CSUN COMP 380/L - Spring 2026
  *
@@ -30,33 +31,17 @@ public class Payment {
     }
 
     public double calculateSubtotal(int days, double pricePerDay) {
-        this.subtotal = days * pricePerDay;
-        return this.subtotal;
+        return 0.0;
     }
 
     public double applyTaxAndFees() {
-        double taxAmount = this.subtotal * this.taxRate;
-        this.totalAmount = this.subtotal + taxAmount + this.fees;
-        return this.totalAmount;
-    }
-
-    public int getPaymentID() {
-        return this.paymentID;
-    }
-
-    public double getSubtotal() {
-        return this.subtotal;
-    }
-
-    public double getTaxRate() {
-        return this.taxRate;
-    }
-
-    public double getFees() {
-        return this.fees;
+        return 0.0;
     }
 
     public double getTotalAmount() {
         return this.totalAmount;
+    }
+
+    public void setTotalAmount(double total) {
     }
 }

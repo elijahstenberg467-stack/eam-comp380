@@ -1,18 +1,16 @@
+package com.carrental;
 /**
  * CSUN COMP 380/L - Spring 2026
  *
  * @author EAM
  */
-import java.time.LocalDate;
-import java.time.temporal.ChronoUnit;
-
 public class Booking {
     private int bookingID;
     private Customer customer;
     private Car car;
-    private LocalDate startDate;
-    private LocalDate endDate;
-    private BookingStatus status;
+    private String startDate;
+    private String endDate;
+    private String status;
     private Payment payment;
 
     // default constructor
@@ -20,16 +18,16 @@ public class Booking {
         this.bookingID = -1;
         this.customer = null;
         this.car = null;
-        this.startDate = null;
-        this.endDate = null;
-        this.status = BookingStatus.PENDING;
+        this.startDate = "N/A";
+        this.endDate = "N/A";
+        this.status = "N/A";
         this.payment = null;
     }
 
     // complete constructor
     public Booking(int bookingID, Customer customer, Car car,
-                   LocalDate startDate, LocalDate endDate,
-                   BookingStatus status, Payment payment) {
+                   String startDate, String endDate,
+                   String status, Payment payment) {
         this.bookingID = bookingID;
         this.customer = customer;
         this.car = car;
@@ -43,6 +41,18 @@ public class Booking {
         return this.bookingID;
     }
 
+    public String getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Payment getPayment() {
+        return this.payment;
+    }
+
     public Customer getCustomer() {
         return this.customer;
     }
@@ -51,32 +61,11 @@ public class Booking {
         return this.car;
     }
 
-    public LocalDate getStartDate() {
+    public String getStartDate() {
         return this.startDate;
     }
 
-    public LocalDate getEndDate() {
+    public String getEndDate() {
         return this.endDate;
-    }
-
-    public BookingStatus getStatus() {
-        return this.status;
-    }
-
-    public void setStatus(BookingStatus status) {
-        this.status = status;
-    }
-
-    public Payment getPayment() {
-        return this.payment;
-    }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    // helper method
-    public long getRentalDays() {
-        return ChronoUnit.DAYS.between(startDate, endDate);
     }
 }
